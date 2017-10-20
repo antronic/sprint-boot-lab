@@ -1,0 +1,20 @@
+{
+  "name": "resources",
+  "homepage": "https://github.com/antronic/sprint-boot-lab",
+  "authors": [
+    "Jirachai Chansivanon <antronic.inc@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
