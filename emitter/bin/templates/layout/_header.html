@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org" >
+<head>
+	<title>Header</title>
+</head>
+
+<body>
+		<nav th:fragment="header" class="navbar navbar-emitter navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a th:href="@{/}" class="navbar-brand">Emitter</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<!-- nav items -->
+					<ul class="nav navbar-nav">
+						<li>
+							<a th:href="@{/}">Home</a>
+						</li>
+						<li>
+							<a th:href="@{/help}">Help</a>
+						</li>
+						<li>
+							<a th:href="@{/contact}">Contact</a>
+						</li>
+						<li>
+							<a th:href="@{/about}">About</a>
+						</li>
+						
+					</ul>
+					<ul class="nav navbar-nav navbar-right" th:if="${isLogin}">
+						<li><a th:href="@{/user/list}">Users</a></li>
+						<li class="drop-down">
+							<ul class="drop-down-menu">
+								<li><a th:href="@{/user/show} + ${loginUser.id}">Profile</a></li>
+								<li><a th:href="@{/user/edit} + ${loginUser.id}">Settings</a></li>
+								<li><a href="/user/logout">Sign out</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right" th:unless="${isLogin}">
+						<li><a href="/user/login">Sign in</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+</body>
+</html>

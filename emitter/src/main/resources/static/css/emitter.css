@@ -1,0 +1,14 @@
+body {
+    padding-top: 70px !important;	
+}
+
+.navbar-emitter {
+	background-color: #134a9e !important;
+	color: #fff !important;
+}
+.navbar-emitter ul.nav li a:hover {
+	background-color: #1d67bd !important;
+}
+.navbar-emitter a {
+	color: #fff !important;	
+}

@@ -1,9 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/main"
+>
 <head>
-<title>Test</title>
+	<title>Home</title>
 </head>
 <body>
-	<h1>Test</h1>
+	<div layout:fragment="content" th:remove="tag">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-xs-9">
+					<h3>Welcome to</h3>
+					<h1 style="margin-top: -.25em;">Emitter</h1>
+				</div>
+				<div class="col-xs-3" style="margin-top: 2em;">
+					<!-- <hr style="border-top-color: #aaa;"/> -->
+					<div class="row">
+						<div class="col-xs-12">
+							<a class="btn btn-block btn-default" href="/user/signUp">Sign up</a>
+						</div>
+						<div class="col-xs-12 text-center" style="margin-top: .25em;">
+							or <a href="@{user/signin}"><strong>Sign in</strong></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+<link rel="stylesheet" href="/stylesheets/main.css"/>
+<script type="text/javascript" src="/javascripts/jquery-1.5.2.min.js"></script>
+</head>
+<body>
+	<h4>Users</h4>
+	<div th:each="hello: ${list}">
+		<h2 th:text="${hello.name}">NO NAME</h2>
+	</div>
+	<div>
+		<a href="/create?form">
+			<button>Create new User</button>
+		</a>
+	</div>
+</body>
+</html>

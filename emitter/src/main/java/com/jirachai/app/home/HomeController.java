@@ -8,8 +8,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 	
-	@Autowired
-	ControllerAspect controllerAspect;
+//	@Autowired
+//	ControllerAspect controllerAspect;
 	
 	@RequestMapping("/")
 	public ModelAndView home(ModelAndView modelAndView){
